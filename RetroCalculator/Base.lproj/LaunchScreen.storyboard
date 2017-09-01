@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +18,128 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbg" translatesAutoresizingMaskIntoConstraints="NO" id="tqg-Po-qh7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-bW-dxp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Hm9-es-DeY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hm9-es-DeY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Hm9-es-DeY"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGA-Fm-PHd">
+                                <rect key="frame" x="60" y="62" width="1541" height="402"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="tW1-Ps-TsB">
+                                        <rect key="frame" x="0.0" y="0.0" width="755" height="402"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="6gY-uf-Duc"/>
+                                            <constraint firstAttribute="width" constant="240" id="8C1-cb-XHv"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6gY-uf-Duc"/>
+                                                <exclude reference="8C1-cb-XHv"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="6gY-uf-Duc"/>
+                                                <include reference="8C1-cb-XHv"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="lG2-j8-hbz">
+                                        <rect key="frame" x="755" y="0.0" width="786" height="402"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="3pV-Db-HKO"/>
+                                            <constraint firstAttribute="height" constant="128" id="cCt-MU-Rxv"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3pV-Db-HKO"/>
+                                                <exclude reference="cCt-MU-Rxv"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="3pV-Db-HKO"/>
+                                                <include reference="cCt-MU-Rxv"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="tqg-Po-qh7" secondAttribute="bottom" id="4w9-6F-kcF"/>
+                            <constraint firstItem="hGA-Fm-PHd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="62" id="J8v-hI-9Vn"/>
+                            <constraint firstItem="tqg-Po-qh7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="Ta8-U9-CCR"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="NVv-bW-dxp" secondAttribute="bottom" id="Yzs-HW-ewn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tqg-Po-qh7" secondAttribute="trailing" constant="-20" id="cS6-F9-ykc"/>
+                            <constraint firstItem="hGA-Fm-PHd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ib7-q9-WGw"/>
+                            <constraint firstItem="tqg-Po-qh7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="sKK-T9-I0Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NVv-bW-dxp" secondAttribute="trailing" constant="-20" id="ubS-Pq-dEn"/>
+                            <constraint firstItem="NVv-bW-dxp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="yPG-GK-alM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tqg-Po-qh7"/>
+                                <exclude reference="NVv-bW-dxp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ubS-Pq-dEn"/>
+                                <exclude reference="yPG-GK-alM"/>
+                                <exclude reference="Ta8-U9-CCR"/>
+                                <exclude reference="cS6-F9-ykc"/>
+                                <exclude reference="sKK-T9-I0Z"/>
+                                <exclude reference="J8v-hI-9Vn"/>
+                                <exclude reference="ib7-q9-WGw"/>
+                                <exclude reference="4w9-6F-kcF"/>
+                                <exclude reference="Yzs-HW-ewn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tqg-Po-qh7"/>
+                                <include reference="NVv-bW-dxp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ubS-Pq-dEn"/>
+                                <include reference="yPG-GK-alM"/>
+                                <include reference="Ta8-U9-CCR"/>
+                                <include reference="cS6-F9-ykc"/>
+                                <include reference="sKK-T9-I0Z"/>
+                                <include reference="J8v-hI-9Vn"/>
+                                <include reference="ib7-q9-WGw"/>
+                                <include reference="4w9-6F-kcF"/>
+                                <include reference="Yzs-HW-ewn"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Retro-Calc" width="755" height="111"/>
+        <image name="launchbg" width="1433" height="957"/>
+        <image name="launchground" width="999" height="225"/>
+        <image name="robot" width="786" height="402"/>
+    </resources>
 </document>
